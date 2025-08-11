@@ -37,5 +37,5 @@ module "asg" {
   max_size = 3
   min_size = 1
   subnet_ids = module.vpc.public_subnet_ids
-  security_group_ids = [module.sg.security_group_id]
+  security_group_ids = [module.security-group.security_group_id]
 }

@@ -27,7 +27,7 @@ module "security_group" {
 }
 
 module "asg" {
-  source = "./modules/asg"
+  source = "./modules/auto-scaling"
   name = "my-asg"
   image_id = "ami-0abcdef1234567890"
   instance_type = "t2.micro"

@@ -16,6 +16,7 @@ module "security_group" {
   name = "web-sg"
   description = "Web Security Group"
   vpc_id = module.vpc.vpc_id
+/*  
   ingress_from_port = 80
   ingress_to_port = 80
   ingress_protocol = "tcp"
@@ -24,6 +25,7 @@ module "security_group" {
   egress_to_port = 0
   egress_protocol = "-1"
   egress_cidr_protocol = ["0.0.0.0/0"]
+*\
 }
 
 module "asg" {

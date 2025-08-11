@@ -50,4 +50,4 @@ variable "egress_cidr_blocks" {
   type = list(string)
 }
 
-*\
+*/

@@ -28,8 +28,8 @@ module "security_group" {
 
 module "asg" {
   source = "./modules/asg"
-  name = "demo-asg"
-  ami_id = "ami-0abcdef1234567890"
+  name = "my-asg"
+  image_id = "ami-0abcdef1234567890"
   instance_type = "t2.micro"
   desired_capacity = 2
   max_size = 3

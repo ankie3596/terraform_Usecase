@@ -33,7 +33,7 @@ variable "max_size" {
   type = number
 }
 
-varaible " min_size" {
+variable " min_size" {
   description = "The minimum number of instances"
   type = number
 }

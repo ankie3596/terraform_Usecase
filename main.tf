@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 
 module "vpc" {
@@ -8,7 +8,7 @@ module "vpc" {
   vpc_name = "my-vpc"
   subnet_a_cidr = "10.0.0.0/24"
   subnet_b_cidr = "10.0.0.0/24"
-  availability_zone = "us-west-2a"
+  availability_zone = "us-east-1a"
 }
 
 module "security_group" {

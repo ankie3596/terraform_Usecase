@@ -4,7 +4,6 @@ provider "aws" {
 
 module "vpc" {
   source = "./modules/vpc"
-  name = "demo_vpc"
   cidr_block = "10.0.0.0/16
   vpc_name = "my-vpc"
   subnet_a_cidr = "10.0.0.0/24"
@@ -17,6 +16,14 @@ module "security_group" {
   name = "web-sg"
   description = "Web Security Group"
   vpc_id = module.vpc.vpc_id
+  ingress_from_port = 80
+  ingress_to_port = 80
+  ingress_protocol = "tcp"
+  ingress_cidr_blocks = "[0.0.0.0/0]"
+  egress_from_port = 0
+  egress_to_port = 0
+  egress_protocol = "-1"
+  egress_cidr_protocol = ["0.0.0.0/0"]
 }
 
 module "asg" {

@@ -17,7 +17,7 @@ egress {
   protocol = var.egress_protocol
   cidr_block = var.egress_cidr_blocks
 }
-*\
+*/
 
 tags = {
   Name = var.name

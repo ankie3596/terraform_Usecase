@@ -10,6 +10,7 @@ variable "vpc_id" {
   description = "The ID of the VPC"
   type = string
 }
+/*
 variable "ingress_from_port" {
   description = "The starting point of ingress"
   type = number
@@ -48,3 +49,5 @@ variable "egress_cidr_blocks" {
   description = "The CIDR blocks allowed for egress"
   type = list(string)
 }
+
+*\

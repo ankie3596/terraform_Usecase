@@ -4,7 +4,7 @@ resource "aws_security_group" "sg" {
   vpc_id = var.vpc_id
 }
 
-ingress {
+\*ingress {
   from_port = var.ingress_from_port
   to_port = var.ingress_to_port
   protocol = var.ingress_protocol
@@ -17,6 +17,7 @@ egress {
   protocol = var.egress_protocol
   cidr_block = var.egress_cidr_blocks
 }
+*\
 
 tags = {
   Name = var.name

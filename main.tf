@@ -25,7 +25,7 @@ module "security_group" {
   egress_to_port = 0
   egress_protocol = "-1"
   egress_cidr_protocol = ["0.0.0.0/0"]
-*\
+*/
 }
 
 module "asg" {

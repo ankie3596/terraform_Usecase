@@ -36,5 +36,6 @@ module "asg" {
   desired_capacity = 2
   max_size = 3
   min_size = 1
+  subnet_ids = module.vpc.public_subnet_ids
   security_group_ids = [module.security_group.security_group_id]
 }

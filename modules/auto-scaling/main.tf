@@ -14,11 +14,9 @@ resource "aws_autoscaling_group" "asg" {
   min_size = var.min_size
   vpc_zone_identifier = aws_launch_configuration.asg_launch_config.id
 
-  tags = [
-    {
+  tags = {
     key = "Name"
     value = var.name
     propagate_at_launch = true
     }
-  ]
 }
